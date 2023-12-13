@@ -1,11 +1,5 @@
 function solution(n) {
-let count = 0;
-
-  for (let i = 1; i <= n; i++) {
-    if (n % i === 0) {
-      count++;
-    }
-  }
-
-  return count;
+ return Array.from(Array(n).keys(), (x) => x + 1).filter(
+    (num) => n % num === 0
+  ).length;
 }
